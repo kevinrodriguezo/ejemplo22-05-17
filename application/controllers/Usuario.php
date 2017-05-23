@@ -7,7 +7,7 @@ class Usuario extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('usuario/regstrarse.php');
+		$this->load->view('registrarse');
 	}
 	/**
 	Funcion para:
@@ -15,15 +15,11 @@ class Usuario extends CI_Controller {
 	 */
 	public function registrar()
 	{
-		$nombre= $this->input->post('nombre');
-		$primer_apellido= $this->input->post('primer_apellido');
-		$segundo_apellido= $this->input->post('segundo_apellido');
-		$user= $this->input->post('user');
-		$contrasena= $this->input->post('contrasena');
-		$correo= $this->input->post('correo');
-		$rol= $this->input->post('rol');
-		$usuario = array('nombre' => $nombre, 'primer_apellido' => $primer_apellido,'segundo_apellido' => $segundo_apellido, 'user' => $user, 'contrasena' => $contrasena, 'correo' => $correo, 'rol' => $rol);
-		 	
+		$first_Name= $this->input->post('first_Name');
+		$last_Name= $this->input->post('last_Name');
+		$user_Name= $this->input->post('user_Name');
+		$pass= $this->input->post('pass');
+		$usuario = array('first_Name' => $first_Name, 'last_Name' => $last_Name,'user_Name' => $user_Name, 'pass' => $pass);
 		 	$r=$this->User_model->save($usuario);
 		 	if(sizeof($r)>0){
 		 		redirect('login');

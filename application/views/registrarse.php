@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link type="text/css" href="<?= base_url('css/estilo.css'); ?>" rel="stylesheet"/>
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- 
@@ -58,41 +58,23 @@
         <div class="container">
           <form action="registrar" method="post">
             <div class="form-group">
-              <label for="nom">Nombre Completo:</label>
-              <input type="text" class="form-control" id="nom" placeholder="Digite su nombre" name="nombre" required pattern="[a-zA-Z]" autofocus="autofocus">
+              <label for="nom">Primer Nombre:</label>
+              <input type="text" class="form-control" id="nom" placeholder="Digite su nombre" name="first_Name" required autofocus="autofocus">
             </div>
             <div class="form-group">
-              <label for="prim_apell">Primer Apellido:</label>
-              <input type="text" class="form-control" id="prim_apell" placeholder="Digite su Primer Apellido" name="primer_apellido" required>
-            </div>
-            <div class="form-group">
-              <label for="seg_apell">Segundo Apellido:</label>
-              <input type="text" class="form-control" id="seg_apell" placeholder="Digte su Segundo Apellido" name="segundo_apellido" required>
+              <label for="seg_apell">Apellido:</label>
+              <input type="text" class="form-control" id="seg_apell" placeholder="Digte su Segundo Apellido" name="last_Name" required>
             </div>
             <div class="form-group">
               <label for="usua">Usuario:</label>
-              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user" required>
+              <input type="text" class="form-control" id="usua" placeholder="Digte su usuario, ejemplo: tigresito" name="user_Name" required>
             </div>
             
             <div class="form-group">
               <label for="pwd">Contraseña:</label>
-              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="contrasena" required>
-            </div>
-            <div class="form-group">
-              <label for="corr">Correo:</label>
-              <input type="email" class="form-control" id="corr" placeholder="Digte su correo; ejemplo quiensoy@hotmail.com" name="correo" required>
-            </div>
-            
-            <div class="form-group">
-            <label >Rol:</label>
-            <br>
-              <select name="rol">
-                <option value="usuario"selected>usuario</option>
-                <option value="administrador">administrador</option>
-              </select>
+              <input type="password" class="form-control" id="pwd" placeholder="Digte su contraseña" name="pass" required>
             </div>
             <input type="submit" value="Registrarse" class="btn btn-default">
-            
           </form>
         </div>
         
